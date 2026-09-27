@@ -18,6 +18,7 @@ npm run dev                     # open http://localhost:5173
 npm test                        # unit tests
 npx playwright install chromium # once, before the first browser test
 npm run e2e                     # browser tests
+npm run a11y                    # accessibility check (session 9)
 ```
 
 ## Milestones

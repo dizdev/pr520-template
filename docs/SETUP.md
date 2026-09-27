@@ -92,7 +92,7 @@ git fetch https://github.com/dizdev/pr520-template main
 ```
 
 ```
-git checkout FETCH_HEAD -- package.json package-lock.json index.html vite.config.ts tsconfig.json tsconfig.app.json tsconfig.node.json src public playwright.config.ts .github/workflows .gitignore .devcontainer .vscode/extensions.json docs/SETUP.md mcp/server.ts
+git checkout FETCH_HEAD -- package.json package-lock.json index.html vite.config.ts tsconfig.json tsconfig.app.json tsconfig.node.json src public playwright.config.ts tests/a11y .github/workflows .gitignore .devcontainer .vscode/extensions.json docs/SETUP.md mcp/server.ts
 ```
 
 This copies the app into your folder. Your own documents stay as they are.

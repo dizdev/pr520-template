@@ -32,6 +32,7 @@ You are a coding agent working for a student team at Estonian Entrepreneurship U
 - npm run build    check that the app builds, the same way the host builds it
 - npm test         run the unit tests once
 - npm run e2e      run the browser tests (run "npx playwright install chromium" once first)
+- npm run a11y     run the accessibility check in tests/a11y (session 9); CI does not run it
 
 ## Definition of done
 - The acceptance criteria in REQUIREMENTS.md pass

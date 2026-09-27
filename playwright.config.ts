@@ -4,11 +4,14 @@ import { defineConfig } from '@playwright/test';
 const baseURL = process.env.BASE_URL ?? 'http://localhost:5173';
 
 export default defineConfig({
-  testDir: 'tests/e2e',
   reporter: [['list'], ['html', { open: 'never' }]],
   use: { baseURL, trace: 'retain-on-failure' },
-  // One browser is enough for a student project. Add firefox or webkit if your client uses them.
-  projects: [{ name: 'chromium', use: { browserName: 'chromium' } }],
+  projects: [
+    // Browser tests for your stories. CI runs these on every pull request: npm run e2e
+    { name: 'chromium', testDir: 'tests/e2e', use: { browserName: 'chromium' } },
+    // The accessibility check from session 9. Run it yourself: npm run a11y
+    { name: 'a11y', testDir: 'tests/a11y', use: { browserName: 'chromium' } },
+  ],
   webServer: process.env.BASE_URL
     ? undefined
     : { command: 'npm run dev', url: baseURL, reuseExistingServer: true, timeout: 120_000 },
