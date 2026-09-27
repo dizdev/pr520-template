@@ -22,10 +22,16 @@ You are a coding agent working for a student team at Estonian Entrepreneurship U
 - Write the pull request description in plain language. A student must be able to explain every line.
 
 ## Stack (change only with a note in docs/DECISIONS.md)
-- Vite, React, TypeScript
-- Supabase for auth and data
-- Playwright for end-to-end tests, Vitest for unit tests
-- GitHub Actions for CI; main deploys to [dev URL] on every merge
+- Vite, React, TypeScript. The start page is src/App.tsx.
+- A database is optional. Add Supabase only when a story needs to save data, and write down why in docs/DECISIONS.md.
+- Vitest for unit tests (files named *.test.ts next to the code). Playwright for browser tests in tests/e2e.
+- GitHub Actions runs CI on every pull request. Vercel deploys main to [dev URL] on every merge.
+
+## Commands
+- npm run dev      start the app on http://localhost:5173
+- npm run build    check that the app builds, the same way the host builds it
+- npm test         run the unit tests once
+- npm run e2e      run the browser tests (run "npx playwright install chromium" once first)
 
 ## Definition of done
 - The acceptance criteria in REQUIREMENTS.md pass

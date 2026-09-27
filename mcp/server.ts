@@ -1,5 +1,5 @@
-// One MCP tool that exposes the product to agents. Session 8 replaces the stub with a real capability.
-// npm install @modelcontextprotocol/sdk zod tsx
+// This file lets an AI agent use your product. Start it with: npm run mcp
+// Session 8 replaces the search_items stub with one real feature of your product.
 import { readFileSync } from 'node:fs';
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
@@ -16,11 +16,11 @@ server.registerTool(
   async () => ({ content: [{ type: 'text', text: readFileSync('docs/PRODUCT.md', 'utf8') }] }),
 );
 
-// ponytail: replace this stub in session 8 with one real capability, e.g. search_items({ query })
+// Stub until session 8. Replace the text below with a real search in your product's data.
 server.registerTool(
   'search_items',
   { description: 'Search the product data. Stub until session 8.', inputSchema: { query: z.string() } },
-  async ({ query }) => ({ content: [{ type: 'text', text: `No data yet for "${query}". Wire this to Supabase.` }] }),
+  async ({ query }) => ({ content: [{ type: 'text', text: `No data yet for "${query}". Connect this to your product's data in session 8.` }] }),
 );
 
 await server.connect(new StdioServerTransport());
