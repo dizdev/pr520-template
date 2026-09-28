@@ -297,7 +297,7 @@ Everyone. 2 minutes.
 
 ## Part 10. Hand in G3
 
-Both people. Due **05.10.2026, 09:00**.
+Delivery Lead posts the link on moodle. Due **05.10.2026, 09:00**.
 
 In Moodle, open **Project setup**. Post three links:
 
@@ -305,7 +305,6 @@ In Moodle, open **Project setup**. Post three links:
 2. The dev URL.
 3. The board.
 
-Both people post the same three links.
 
 ---
 
